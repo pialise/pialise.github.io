@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="scoresheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="scoresheet.js"></script>
+<title>Greenlandic Kayak-rolling Score-sheet</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80073803-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+    
+<body>
+
+    <div id="container"> <table id="table">
+  <thead>
+    <tr>
+      <th>Nr.</th>
+      <th>Roll to perform</th>
+      <th>Less</th>
+      <th>More</th>
+      <th>Less</th>
+      <th>More</th>
+      <th>Sum</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td id="bottom" colspan="7"></td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr id="one">
+      <td class="rollnumber">1</td>
+      <td class="name">Side Scull</td>
+      <td id="onenill" class="number inaktiv left less">1</td>
+      <td id="onenilm" class="number inaktiv left more">2</td>
+      <td id="onenirl" class="number inaktiv right less">1</td>
+      <td id="onenirm" class="number inaktiv right more">2</td>
+      <td id="onesum">0</td>
+    </tr>
+    <tr id="two">
+      <td class="rollnumber">2</td>
+      <td class="name">Chest Scull</td>
+      <td id="twonill" class="number inaktiv left less">1</td>
+      <td id="twonilm" class="number inaktiv left more">2</td>
+      <td id="twonirl" class="number inaktiv right less">1</td>
+      <td id="twonirm" class="number inaktiv right more">2</td>
+      <td class="reset">Reset</td>
+    </tr>
+    <tr id="three">
+      <td class="rollnumber">3</td>
+      <td class="name">Standard Greenland Roll</td>
+      <td id="threenill" class="number inaktiv left less">1</td>
+      <td id="threenilm" class="number inaktiv left more">2</td>
+      <td id="threenirl" class="number inaktiv right less">1</td>
+      <td id="threenirm" class="number inaktiv right more">2</td>
+    </tr>
+    
+    <tr id="four">
+      <td class="rollnumber">4</td>
+      <td class="name">Paddle in Crook of Arm</td>
+      <td id="fournill" class="number inaktiv left less">2</td>
+      <td id="fournilm" class="number inaktiv left more">3</td>
+      <td id="fournirl" class="number inaktiv right less">2</td>
+      <td id="fournirm" class="number inaktiv right more">3</td>
+    </tr>
+
+    <tr id="five">
+      <td class="rollnumber">5</td>
+      <td class="name">Storm Roll</td>
+      <td id="fivenill" class="number inaktiv left less">2</td>
+      <td id="fivenilm" class="number inaktiv left more">3</td>
+      <td id="fivenirl" class="number inaktiv right less">2</td>
+      <td id="fivenirm" class="number inaktiv right more">3</td>
+    </tr>
+    <tr id="six">
+      <td class="rollnumber">6</td>
+      <td class="name">Reverse Roll</td>
+      <td id="sixnill" class="number inaktiv left less">2</td>
+      <td id="sixnilm" class="number inaktiv left more">3</td>
+      <td id="sixnirl" class="number inaktiv right less">2</td>
+      <td id="sixnirm" class="number inaktiv right more">3</td>
+    </tr>
+    <tr id="seven">
+      <td class="rollnumber">7</td>
+      <td class="name">Spine Roll</td>
+      <td id="sevennill" class="number inaktiv left less">2</td>
+      <td id="sevennilm" class="number inaktiv left more">3</td>
+      <td id="sevennirl" class="number inaktiv right less">2</td>
+      <td id="sevennirm" class="number inaktiv right more">3</td>
+    </tr>
+    <tr id="eight">
+      <td class="rollnumber">8</td>
+      <td class="name">Paddle held behind back</td>
+      <td id="eightnill" class="number inaktiv left less">2</td>
+      <td id="eightnilm" class="number inaktiv left more">3</td>
+      <td id="eightnirl" class="number inaktiv right less">2</td>
+      <td id="eightnirm" class="number inaktiv right more">3</td>
+    </tr>
+
+    <tr id="nine">
+      <td class="rollnumber">9</td>
+      <td class="name">Standard Roll, paddle behind head</td>
+      <td id="ninenill" class="number inaktiv left less">3</td>
+      <td id="ninenilm" class="number inaktiv left more">4</td>
+      <td id="ninenirl" class="number inaktiv right less">3</td>
+      <td id="ninenirm" class="number inaktiv right more">4</td>
+    </tr>
+
+    <tr id="ten">
+      <td class="rollnumber">10</td>
+      <td class="name">Reverse Roll, paddle behind head</td>
+      <td id="tennill" class="number inaktiv left less">3</td>
+      <td id="tennilm" class="number inaktiv left more">4</td>
+      <td id="tennirl" class="number inaktiv right less">3</td>
+      <td id="tennirm" class="number inaktiv right more">4</td>
+    </tr>
+
+    <tr id="eleven">
+      <td class="rollnumber">11</td>
+      <td class="name">Armpit Roll</td>
+      <td id="elevennill" class="number inaktiv left less">2</td>
+      <td id="elevennilm" class="number inaktiv left more">3</td>
+      <td id="elevennirl" class="number inaktiv right less">2</td>
+      <td id="elevennirm" class="number inaktiv right more">3</td>
+    </tr>
+  
+    <tr id="twelve">
+      <td class="rollnumber">12</td>
+      <td class="name">Vertical Sculling Roll</td>
+      <td id="twelvenill" class="number inaktiv left less">3</td>
+      <td id="twelvenilm" class="number inaktiv left more">4</td>
+      <td id="twelvenirl" class="number inaktiv right less">3</td>
+      <td id="twelvenirm" class="number inaktiv right more">4</td>
+    </tr>
+    
+    <tr id="thirteen">
+      <td class="rollnumber">13</td>
+      <td class="name">Sculling Roll with paddle held horizontal on foredeck</td>
+      <td id="thirteennill" class="number inaktiv left less">3</td>
+      <td id="thirteennilm" class="number inaktiv left more">4</td>
+      <td id="thirteennirl" class="number inaktiv right less">3</td>
+      <td id="thirteennirm" class="number inaktiv right more">4</td>
+    </tr>
+   
+    <tr id="fourteen">
+      <td class="rollnumber">14</td>
+      <td class="name">Sculling Roll with paddle held horizontal above "backrest"</td>
+      <td id="fourteennill" class="number inaktiv left less">4</td>
+      <td id="fourteennilm" class="number inaktiv left more">5</td>
+      <td id="fourteennirl" class="number inaktiv right less">4</td>
+      <td id="fourteennirm" class="number inaktiv right more">5</td>
+      <td id="twosum">0</td>
+    </tr>
+        
+   <tr id="fifteen">
+      <td class="rollnumber">15</td>
+      <td class="name">Roll with arms crossed</td>
+      <td id="fifteennill" class="number inaktiv left less">4</td>
+      <td id="fifteennilm" class="number inaktiv left more">5</td>
+      <td id="fifteennirl" class="number inaktiv right less">4</td>
+      <td id="fifteennirm" class="number inaktiv right more">5</td>
+       <td class="reset">Reset</td>
+    </tr>
+       
+   <tr id="sixteen">
+      <td class="rollnumber">16</td>
+      <td class="name">Sculling with paddle held under kayak</td>
+      <td id="sixteennill" class="number inaktiv left less">4</td>
+      <td id="sixteennilm" class="number inaktiv left more">5</td>
+      <td id="sixteennirl" class="number inaktiv right less">4</td>
+      <td id="sixteennirm" class="number inaktiv right more">5</td>
+    </tr>
+    
+   <tr id="seventeen">
+      <td class="rollnumber">17</td>
+      <td class="name">Successive Storm Rolls performed in 10 seconds</td>
+      <td id="seventeennill" class="number inaktiv left less">4</td>
+      <td id="seventeennilm" class="number inaktiv left more">5</td>
+      <td id="seventeennirl" class="number inaktiv right less">4</td>
+      <td id="seventeennirm" class="number inaktiv right more">5</td>
+    </tr>
+    
+   <tr id="eightteen">
+      <td class="rollnumber">18</td>
+      <td class="name">Successive Standard Rolls performed in 10 seconds</td>
+      <td id="eighteennill" class="number inaktiv left less">3</td>
+      <td id="eighteennilm" class="number inaktiv left more">4</td>
+      <td id="eighteennirl" class="number inaktiv right less">3</td>
+      <td id="eighteennirm" class="number inaktiv right more">4</td>
+    </tr>
+   
+   <tr id="nineteen">
+      <td class="rollnumber">19</td>
+      <td class="name">Roll with hunting float</td>
+      <td id="nineteennill" class="number inaktiv left less">4</td>
+      <td id="nineteennilm" class="number inaktiv left more">5</td>
+      <td id="nineteennirl" class="number inaktiv right less">4</td>
+      <td id="nineteennirm" class="number inaktiv right more">5</td>
+    </tr>
+
+   <tr id="twenty">
+      <td class="rollnumber">20</td>
+      <td class="name">Throwing stick. Start forward, ending forward</td>
+      <td id="twentynill" class="number inaktiv left less">5</td>
+      <td id="twentynilm" class="number inaktiv left more">6</td>
+      <td id="twentynirl" class="number inaktiv right less">5</td>
+      <td id="twentynirm" class="number inaktiv right more">6</td>
+    </tr>
+ 
+   <tr id="twentyone">
+      <td class="rollnumber">21</td>
+      <td class="name">Throwing stick, start leaning aft, sweep from stern to bow</td>
+      <td id="twentyonenill" class="number inaktiv left less">5</td>
+      <td id="twentyonenilm" class="number inaktiv left more">6</td>
+      <td id="twentyonenirl" class="number inaktiv right less">5</td>
+      <td id="twentyonenirm" class="number inaktiv right more">6</td>
+    </tr>
+ 
+   <tr id="twentytwo">
+      <td class="rollnumber">22</td>
+      <td class="name">Throwing stick, start tucked forward, finish leaning aft</td>
+      <td id="twentytwonill" class="number inaktiv left less">5</td>
+      <td id="twentytwonilm" class="number inaktiv left more">6</td>
+      <td id="twentytwonirl" class="number inaktiv right less">5</td>
+      <td id="twentytwonirm" class="number inaktiv right more">6</td>
+    </tr>
+ 
+   <tr id="twentythree">
+      <td class="rollnumber">23</td>
+      <td class="name">Hand roll, start tucked forward, finish tucked forward</td>
+      <td id="twentythreenill" class="number inaktiv left less">6</td>
+      <td id="twentythreenilm" class="number inaktiv left more">7</td>
+      <td id="twentythreenirl" class="number inaktiv right less">6</td>
+      <td id="twentythreenirm" class="number inaktiv right more">7</td>
+    </tr>
+ 
+   <tr id="twentyfour">
+      <td class="rollnumber">24</td>
+      <td class="name">Hand roll, start leaning aft, sweep from stern to bow</td>
+      <td id="twentyfournill" class="number inaktiv left less">6</td>
+      <td id="twentyfournilm" class="number inaktiv left more">7</td>
+      <td id="twentyfournirl" class="number inaktiv right less">6</td>
+      <td id="twentyfournirm" class="number inaktiv right more">7</td>
+    </tr>
+    
+ <tr id="twentyfive">
+      <td class="rollnumber">25</td>
+      <td class="name">Hand roll, start tucked forward, finish leaning aft</td>
+      <td id="twentyfivenill" class="number inaktiv left less">6</td>
+      <td id="twentyfivenilm" class="number inaktiv left more">7</td>
+      <td id="twentyfivenirl" class="number inaktiv right less">6</td>
+      <td id="twentyfivenirm" class="number inaktiv right more">7</td>
+    </tr>
+ 
+   <tr id="twentysix">
+      <td class="rollnumber">26</td>
+      <td class="name">Hand roll. Clenched fist, start tucked forward, finish tucked forward</td>
+      <td id="twentysixnill" class="number inaktiv left less">7</td>
+      <td id="twentysixnilm" class="number inaktiv left more">8</td>
+      <td id="twentysixnirl" class="number inaktiv right less">7</td>
+      <td id="twentysixnirm" class="number inaktiv right more">8</td>
+    </tr>
+ 
+   <tr id="twentyseven">
+      <td class="rollnumber">27</td>
+      <td class="name">Hand roll. Clenched fist, start leaning aft, sweep from stern to bow</td>
+      <td id="twentysevennill" class="number inaktiv left less">7</td>
+      <td id="twentysevennilm" class="number inaktiv left more">8</td>
+      <td id="twentysevennirl" class="number inaktiv right less">7</td>
+      <td id="twentysevennirm" class="number inaktiv right more">8</td>
+    </tr>
+ 
+   <tr id="twentyeight">
+      <td class="rollnumber">28</td>
+      <td class="name">Hand roll.Clenched fist, start tucked forward, finish leaning aft</td>
+      <td id="twentyeightnill" class="number inaktiv left less">7</td>
+      <td id="twentyeightnilm" class="number inaktiv left more">8</td>
+      <td id="twentyeightnirl" class="number inaktiv right less">7</td>
+      <td id="twentyeightnirm" class="number inaktiv right more">8</td>
+       <td id="threesum">0</td>
+    </tr>
+ 
+   <tr id="twentynine">
+      <td class="rollnumber">29</td>
+      <td class="name">Hand roll. Eight kilogram brick. Start tucked forward, finish tucked forward</td>
+      <td id="twentyninenill" class="number inaktiv left less">8</td>
+      <td id="twentyninenilm" class="number inaktiv left more">9</td>
+      <td id="twentyninenirl" class="number inaktiv right less">8</td>
+      <td id="twentyninenirm" class="number inaktiv right more">9</td>
+      <td class="reset">Reset</td>
+    </tr>
+    
+   <tr id="thirty">
+      <td class="rollnumber">30</td>
+      <td class="name">Hand roll. Eight kilogram brick. Start leaning aft, sweep from stern to bow</td>
+      <td id="thirtynill" class="number inaktiv left less">8</td>
+      <td id="thirtynilm" class="number inaktiv left more">9</td>
+      <td id="thirtynirl" class="number inaktiv right less">8</td>
+      <td id="thirtynirm" class="number inaktiv right more">9</td>
+    </tr>
+ 
+   <tr id="thirtyone">
+      <td class="rollnumber">31</td>
+      <td class="name">Hand roll. Eight kilogram brick. Start tucked forward, finish leaning aft</td>
+      <td id="thirtyonenill" class="number inaktiv left less">8</td>
+      <td id="thirtyonenilm" class="number inaktiv left more">9</td>
+      <td id="thirtyonenirl" class="number inaktiv right less">8</td>
+      <td id="thirtyonenirm" class="number inaktiv right more">9</td>
+    </tr>
+ 
+   <tr id="thirtytwo">
+      <td class="rollnumber">32</td>
+      <td class="name">Elbow roll</td>
+      <td id="thirtytwonill" class="number inaktiv left less">9</td>
+      <td id="thirtytwonilm" class="number inaktiv left more">10</td>
+      <td id="thirtytwonirl" class="number inaktiv right less">9</td>
+      <td id="thirtytwonirm" class="number inaktiv right more">10</td>
+    </tr>
+ 
+   <tr id="thirtythree">
+      <td class="rollnumber">33</td>
+      <td class="name">Straight jacket, no hands-roll</td>
+      <td id="thirtythreenill" class="number inaktiv left less">10</td>
+      <td id="thirtythreenilm" class="number inaktiv left more">11</td>
+      <td id="thirtythreenirl" class="number inaktiv right less">10</td>
+      <td id="thirtythreenirm" class="number inaktiv right more">11</td>
+    </tr>
+ <!-- 
+  <tr id="thirtyfour">
+      <td class="rollnumber">34</td>
+      <td class="name">Paddling upside down</td>
+    <td class="upside">Meter:</td>
+    <td id="inputmeter" class="inputmeter"><input type="number" min="0" id="numberToGet"></td>
+    <td class="upside">Points:</td>
+    <td id="poengmeter" class="inaktiv">0</td>
+    </tr>
+ -->
+    <tr id="thirtyfour">
+      <td class="rollnumber">34</td>
+      <td class="name">Paddling upside down</td>
+      <td class="upside meter">Meter:</td>
+      <td id="inputmeter" class="inputmeter"><input type="number" min="0" id="numberToGet"></td>
+      <td id="calc">Click for points:</td>
+      <td id="poengmeter" class="inaktiv">0</td>
+    </tr>
+
+    <tr id="thirtyfive">
+      <td class="rollnumber">35</td>
+      <td class="name">Walrus Pull</td>
+      <td id="thirtyfivenill" class="number inaktiv left less">8</td>
+      <td id="thirtyfivenilm" class="number inaktiv left more">9</td>
+      <td id="thirtyfivenirl" class="number inaktiv right less">8</td>
+      <td id="thirtyfivenirm" class="number inaktiv right more">9</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+    
+</body>
+</html>

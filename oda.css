@@ -1,0 +1,70 @@
+* {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding 0;
+}
+main {
+    max-width: 1500px;
+    margin: 0px auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    height: auto;
+    box-shadow: 4px 4px 8px #777;
+    border: 10px solid white;
+    margin-bottom: 20px;
+}
+
+p {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2.4em;
+}
+
+p:first-child {
+    margin-top: 0px;
+}
+#prinsesse {
+    margin-top: 0px;
+}
+#prinsesse,
+#mari,
+#ballerina,
+#kuleste,
+#fikser,
+#omsorg,
+#prinsen {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+#prinsesse {
+    background-color: pink;
+}
+#mari {
+    background-color: #90EE90;
+}
+#ballerina {
+    background-color: #D8BFD8;
+}
+#kuleste {
+    background-color: #40E0D0;
+}
+#fikser {
+    background-color: #FFDA89;
+}
+#omsorg {
+    background-color: #B0C4DE;
+}
+#prinsen {
+    background-color: pink;
+}

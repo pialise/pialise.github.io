@@ -1,0 +1,315 @@
+/*
+Lilla #993399, Imellom #C2475C, Orange #FF6600 */
+
+* {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    box-sizing: border-box;
+}
+
+table {
+  border-spacing: 0.5rem;
+  border: 1px solid #993399;
+}
+thead {
+  font-size: 1.6em;
+}
+td {
+  padding: 0.2em;
+  font-size: 1.6em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+td.upside {
+  font-size: 1.2em;
+  cursor: default;
+  max-width: 70px;
+}
+#calc {
+  font-size: 1em;
+  max-width: 70px;
+  color: white;
+  border-radius: 8px;
+  background-color: #993399;
+}
+#calc:hover {
+  background-color: #C2475C;
+}
+
+#onesum,
+#twosum,
+#threesum {
+  border: 4px solid #993399;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.reset {
+  background-color: white;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 8px;
+  background-color: #993399;
+}
+
+#inputmeter {
+  padding: 0.4em;
+  width: 70px;
+  font-size: 0.6em;
+  text-align: right;
+  border-radius: 2px;
+  background-color: white;
+  border: 3px solid #993399;
+}
+
+input {
+  width: 100%;
+  font-size: 2.6em;
+  border-style: none;
+  text-align: right;
+  padding-right: 6px;
+}
+
+#numberToGet:focus { 
+  outline:none; 
+}
+.aktiv {
+  background-color: #FF6600;
+  font-size: 1.8em;
+}
+
+.aktiv:active {
+  box-shadow: 0px 2px black;
+}
+
+.inaktiv {
+  background-color: #993399;
+}
+
+.inaktiv:hover {
+  background-color: #C2475C;
+}
+
+.inaktiv:active {
+  box-shadow: 1px 1px #993399;
+}
+#poengmeter:hover {
+  cursor: default;
+}
+.meter:hover {
+  background-color: white;
+  cursor: default;
+}
+.name {
+  font-size: 1em;
+  background-color: #993399;
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+  cursor: default;
+}
+
+.rollnumber {
+  font-size: 1.8em;
+  background-color: #993399;
+  color: white;
+  cursor: default;
+}
+.rollnumber:hover,
+.name:hover {
+  background-color: #993399;
+}
+
+#bottom {
+  background-color: #993399;
+  height: 20px;
+  cursor: auto;
+}
+/* _________ Media queries _________*/
+
+
+@media screen and (max-width: 768px) {
+  table {
+    max-width: 700px;
+  }
+  td {
+    width: 60px;
+    font-size: 1.3em;
+  }
+ thead {
+  font-size: 1em;
+} 
+#onesum,
+#twosum,
+#threesum {
+  border: 3px solid #993399;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+}
+
+.reset {
+  font-size: 1.4em;
+  border-radius: 4px;
+}
+td.upside {
+  font-size: 1em;
+}
+#calc {
+  font-size: 0.8em;
+  border-radius: 8px;
+}
+
+#inputmeter {
+  font-size: 0.6em;
+  background-color: white;
+  border: 3px solid #993399;
+}
+input {
+  font-size: 2.2em;
+}
+
+  .name {
+  width: 400px;
+  font-size: 0.9em;
+}
+
+.rollnumber {
+  font-size: 1.5em;
+}
+  .aktiv {
+    font-size: 1.3em;
+  }
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  td {
+    width: 40px;
+    font-size: 1em;
+  }
+  thead {
+  font-size: 0.8em;
+}
+#onesum,
+#twosum,
+#threesum {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.reset {
+  font-size: 1em;
+  border-radius: 4px;
+}
+  .name {
+  width: 500px;
+  font-size: 0.6em;
+}
+
+td.upside {
+  font-size: 0.8em;
+}
+#calc {
+  font-size: 0.6em;
+  border-radius: 8px;
+}
+
+#inputmeter {
+  font-size: 0.5em;
+  background-color: white;
+  border: 4px solid #993399;
+}
+
+input {
+  font-size: 1.8em;
+  padding-right: 0px;
+}
+
+.rollnumber {
+  font-size: 1.1em;
+}
+  .aktiv {
+    font-size: 1em;
+  }
+}
+
+/*
+@media screen and (max-width: 480px) {
+  table {
+    width: 460px;
+  }
+
+
+}
+*/
+/* Portrait and Landscape iPhone6 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    
+  td {
+    width: 50px;
+    font-size: 1em;
+    color: white;
+  }
+  thead {
+  font-size: 0.8em;
+}
+#onesum,
+#twosum,
+#threesum {
+  font-size: 0.8em;
+}
+
+.reset {
+  font-size: 0.8em;
+  border-radius: 4px;
+}
+  .name {
+  width: 500px;
+  font-size: 0.6em;
+}
+
+td.upside {
+  font-size: 0.6em;
+  background-color: #993399;
+}
+    
+.meter:hover {
+  background-color: #993399;
+}
+#calc {
+  font-size: 0.5em;
+  border-radius: 6px;
+}
+
+#inputmeter {
+  font-size: 0.5em;
+  background-color: white;
+  border: 3px solid #993399;
+}
+
+input {
+  font-size: 1.8em;
+  padding-right: 0px;
+}
+
+.rollnumber {
+  font-size: 1em;
+}
+  .aktiv {
+    font-size: 1em;
+  }
+}
+
+
